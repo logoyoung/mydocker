@@ -19,6 +19,6 @@ COPY ./setup.cfg /setup.cfg
 COPY ./requirements.txt /requirements.txt
 RUN pip3 install  -r requirements.txt -i https://mirrors.cloud.tencent.com/pypi/simple/
 #
-RUN yum -y groupinstall "Fonts"
+RUN yum -y groupinstall "Fonts" wget vim
 RUN yum -y install libreoffice-calc.x86_64
 RUN yum -y install libreoffice-writer.x86_64
