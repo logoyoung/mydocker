@@ -17,6 +17,7 @@ COPY ./Makefile /Makefile
 COPY ./setup.py /setup.py
 COPY ./setup.cfg /setup.cfg
 COPY ./requirements.txt /requirements.txt
+pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
 RUN pip3 install  -r requirements.txt -i https://mirrors.cloud.tencent.com/pypi/simple/
 #
 RUN yum -y groupinstall "Fonts"
