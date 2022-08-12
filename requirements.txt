@@ -28,5 +28,5 @@ paddlepaddle
 paddleocr==2.4
 chardet
 sortedcontainers
-#torch==1.11.0
-#torchvision
+torch==1.11.0
+torchvision
