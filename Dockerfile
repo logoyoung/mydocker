@@ -17,8 +17,9 @@ COPY ./Makefile /Makefile
 COPY ./setup.py /setup.py
 COPY ./setup.cfg /setup.cfg
 COPY ./requirements.txt /requirements.txt
-RUN pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
 RUN pip3 install  -r requirements.txt -i https://mirrors.cloud.tencent.com/pypi/simple/
+RUN pip3 install torch==1.11.0 -i https://pypi.tuna.tsinghua.edu.cn/simple/
+RUN pip3 install torchvision -i https://pypi.tuna.tsinghua.edu.cn/simple/
 #
 RUN yum -y groupinstall "Fonts"
 RUN yum -y install libreoffice-calc.x86_64
